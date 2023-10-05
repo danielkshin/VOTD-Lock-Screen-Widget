@@ -29,7 +29,7 @@ let votds = await request.loadJSON();
 votds = votds['votd'];
 
 // Get Verse of the Day for today
-request = new Request(`https://nodejs.bible.com/api/bible/verse/3.1?id=${bibleVersion}&reference=${votds[dayOfYear]['usfm']}`);
+request = new Request(`https://nodejs.bible.com/api/bible/verse/3.1?id=${bibleVersion}&reference=${votds[dayOfYear]['usfm'][0]}`);
 let votd = await request.loadJSON();
 
 // Add the verse content
